@@ -54,6 +54,21 @@ class Pizza {
         }
     }
 
+    public function getIngredient1() {
+        return $this->ingredient1;
+    }
+
+    public function getIngredient2() {
+        return $this->ingredient2;
+    }
+
+    public function getIngredient3() {
+        return $this->ingredient3;
+    }
+
+    public function getIngredients() {
+        return [$this->ingredient1, $this->ingredient2, $this->ingredient3];
+    }
     // fonction pour livrer la pizza, si une commande est payée
 
     public function ship(){
@@ -62,9 +77,12 @@ class Pizza {
         }
     }
 }
-// 
+// instance de class/on encapsule
 $pizza = new Pizza('xl', 'tomate', 'jambon', 'poivrons', 'piments');
 $pizza -> pay();
 $pizza -> ship();
 
-var_dump($pizza);
+
+echo $pizza->getIngredient1();
+echo $pizza->getIngredient2();
+echo $pizza->getIngredient3();
